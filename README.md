@@ -1,6 +1,6 @@
 [![MasterHead](https://github.com/Auspicious-EX/CultureConnect/blob/main/IMG/banner.gif?raw=true)](https://)
 
-# Culture Connect Nav 2023
+# Culture Connect
 "Culture Connect Nav 2023: Bridging Global Voices" – an innovative project revolutionizing the way we share and access blogs worldwide. Through cutting-edge language translation technologies and a user-friendly platform, Culture Connect makes blogs accessible to a global audience, enabling seamless cultural exchange and understanding. Our platform empowers users to share their stories, insights, and experiences without language barriers, fostering a global community of knowledge and cultural appreciation. By leveraging advanced translation algorithms, Culture Connect ensures that the essence and context of each blog are preserved, providing an authentic and enriching reading experience for everyone.
 
 # Overview
