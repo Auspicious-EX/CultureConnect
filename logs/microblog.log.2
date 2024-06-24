@@ -1,0 +1,88 @@
+2024-02-14 22:46:03,936 INFO: Microblog startup [in /home/zero/Documents/vscode/learn-flask/app/__init__.py:40]
+2024-02-26 23:48:32,012 INFO: Microblog startup [in /home/zero/Documents/vscode/learn-flask/app/__init__.py:42]
+2024-04-18 09:28:24,931 INFO: Microblog startup [in /home/zero/Documents/vscode/learn-flask/app/__init__.py:83]
+2024-04-18 09:28:54,289 INFO: Microblog startup [in /home/zero/Documents/vscode/learn-flask/app/__init__.py:83]
+2024-04-18 09:29:02,686 INFO: Microblog startup [in /home/zero/Documents/vscode/learn-flask/app/__init__.py:83]
+2024-06-24 21:34:46,785 INFO: Microblog startup [in D:\Projects - College\0.4 Coulter Connect Blog\CC\app\__init__.py:83]
+2024-06-24 21:36:03,273 ERROR: Exception on /auth/register [POST] [in C:\Users\vostro5402\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py:828]
+Traceback (most recent call last):
+  File "C:\Users\vostro5402\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\base.py", line 1969, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\vostro5402\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\default.py", line 922, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such column: user.last_message_read_time
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\vostro5402\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vostro5402\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vostro5402\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vostro5402\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects - College\0.4 Coulter Connect Blog\CC\app\auth\routes.py", line 44, in register
+    if form.validate_on_submit():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vostro5402\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask_wtf\form.py", line 86, in validate_on_submit
+    return self.is_submitted() and self.validate(extra_validators=extra_validators)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vostro5402\AppData\Local\Programs\Python\Python312\Lib\site-packages\wtforms\form.py", line 329, in validate
+    return super().validate(extra)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vostro5402\AppData\Local\Programs\Python\Python312\Lib\site-packages\wtforms\form.py", line 146, in validate
+    if not field.validate(self, extra):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vostro5402\AppData\Local\Programs\Python\Python312\Lib\site-packages\wtforms\fields\core.py", line 246, in validate
+    stop_validation = self._run_validation_chain(form, chain)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vostro5402\AppData\Local\Programs\Python\Python312\Lib\site-packages\wtforms\fields\core.py", line 266, in _run_validation_chain
+    validator(form, self)
+  File "D:\Projects - College\0.4 Coulter Connect Blog\CC\app\auth\forms.py", line 27, in validate_username
+    user = db.session.scalar(sa.select(User).where(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vostro5402\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\scoping.py", line 1859, in scalar
+    return self._proxied.scalar(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vostro5402\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 2358, in scalar
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vostro5402\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 2190, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vostro5402\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\context.py", line 293, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "C:\Users\vostro5402\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\vostro5402\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\sql\elements.py", line 517, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vostro5402\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\base.py", line 1639, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vostro5402\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\base.py", line 1848, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vostro5402\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\base.py", line 1988, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\vostro5402\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\base.py", line 2344, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\vostro5402\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\base.py", line 1969, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\vostro5402\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\default.py", line 922, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: user.last_message_read_time
+[SQL: SELECT user.id, user.username, user.email, user.password_hash, user.about_me, user.last_seen, user.last_message_read_time 
+FROM user 
+WHERE user.username = ?]
+[parameters: ('shubham0',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-06-24 21:44:36,154 INFO: Microblog startup [in D:\Projects - College\0.4 Coulter Connect Blog\CC\app\__init__.py:83]
